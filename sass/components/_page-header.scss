@@ -1,0 +1,24 @@
+.page-header {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #ececec;
+  background-color: var(--text-and-primary-bg-white-color);
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__site-nav {
+  margin-left: 93px;
+}
+
+.page-header__connection-list{
+  margin-left: auto;
+}
