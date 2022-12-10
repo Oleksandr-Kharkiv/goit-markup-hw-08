@@ -4,31 +4,60 @@
     padding-bottom: 60px;
   }
   .page-footer__container {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 60px;
+      justify-content: center;
+      align-items: center;
+
+    @media screen and (min-width: 768px) {
+      column-gap: 0;
+      align-items: baseline;
+    }
+
+    @media screen and (min-width: 1200px) {
+      row-gap: 0;
+      justify-content: space-between;
+    }
   }
   // .page-footer__contacts {
   // }
 
   .page-footer__our-contacts{
-    margin-top: 20px;
+    margin-top: 28px;
+    
+    // @media screen and (min-width: 1200px) {
+    // }
   }
   .page-footer__join {
-    margin-left: 70px;
+    @media screen and (min-width: 768px) {
+      margin-left: 165px;      
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 70px;
+    }
   }
   .page-footer__proposal {
-    display: block;
     margin-bottom: 20px;
-    padding-top: 12px;
+    display: block;
+    text-align: center;
     color: var(--text-and-primary-bg-white-color);
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 12px;
+      text-align: left;
+    }
   }
   .page-footer__subscribe {
-    display: block;
-    margin-left: 93px;
+    
+
+    @media screen and (min-width: 1200px) {
+      display: block;
+      margin-left: 93px;
+    }
   }

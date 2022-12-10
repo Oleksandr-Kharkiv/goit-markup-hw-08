@@ -7,9 +7,21 @@ body {
   .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
+    
+    @media screen and (min-width: 480px) {
+      width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 1200px;
+    }
   }
 
   .link {
@@ -31,14 +43,33 @@ body {
   }
   
   .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+      padding-top: 60px;
+      padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
   }
   .section__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     color: var(--title-text-color);
-    font-size: 36px;
-    line-height: 1.17;
+    font-size: 28px;
+    line-height: 1.18;
     letter-spacing: 0.03em;
     text-align: center;
+    
+    @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+    }
+  }
+
+  // --------------- тимчасово! прибери це!
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 100%;
   }

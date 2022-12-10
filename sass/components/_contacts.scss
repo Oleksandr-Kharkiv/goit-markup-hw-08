@@ -1,9 +1,14 @@
 .contacts-list{
   @extend %list;
   font-style: normal;
+  text-align: center;
+    
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
 }
   .contacts-list__item {
-    margin-top: 9px;
+    margin-top: 12px;
 
     &:first-child{
       margin-top: 0;
