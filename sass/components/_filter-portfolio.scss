@@ -3,13 +3,25 @@
 // .our-portfolio {
 // }
 .our-portfolio__filter {
-  margin-bottom: 34px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter {
   @extend %list;
   display: flex;
-  justify-content: center;
+  // flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+  }
+  
 }
   .filter__item {
     margin-left: 8px;
