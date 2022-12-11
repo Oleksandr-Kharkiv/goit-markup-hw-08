@@ -27,3 +27,34 @@
 .page-header__connection-list{
   margin-left: auto;
 }
+
+.button { 
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: transparent;
+  background-color: transparent;
+ 
+  cursor: pointer;
+  transition: fill 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+
+.button__close {
+  display: none;
+}
+.button.is-open .button__close{
+  display: block;
+}
+.button.is-open .button__open{
+  display: none;
+}
