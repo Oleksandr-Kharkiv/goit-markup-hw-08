@@ -4,9 +4,9 @@ body {
     font-family: "Roboto", sans-serif;
   }
 
-  // body.modal-open {
-  //   overflow: hidden;
-  // }
+  body.modal-open {
+    overflow: hidden;
+  }
   
   .container {
     margin-left: auto;
@@ -75,5 +75,5 @@ body {
     display: block;
     max-width: 100%;
     height: auto;
-    width: 100%;
+    // width: 100%;
   }

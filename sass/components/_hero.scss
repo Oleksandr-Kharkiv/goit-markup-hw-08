@@ -63,18 +63,18 @@
   margin-left: auto;
   margin-right: auto;
 
-  max-width: 480px;
-  height: 400px;
+  max-width: 100%;
+  height: auto;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-  url(../images/hero-img-mobile.jpg);
+  url(/images/hero-img-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 480px) {
     max-width: 768px;
     height: 400px;
     background-image: linear-gradient(
@@ -82,6 +82,15 @@
         rgba(47, 48, 58, 0.4)
       ),
       url(../images/hero-img-tablet.jpg);
+  }
+  @media screen and (max-width: 768px) {
+    max-width: 1200px;
+    height: 400px;
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../images/hero-img-desktop.jpg);
   }
   @media screen and (min-width: 1200px) {
     max-width: 1600px;
