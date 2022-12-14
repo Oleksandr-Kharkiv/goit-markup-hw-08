@@ -4,11 +4,7 @@
   background-color: var(--hero-bg-color);
   text-align: center;
 
-  // @media screen and (min-width: 480px){
-    
-  // }
-
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     padding-top: 200px;
     padding-bottom: 200px;
   }
@@ -27,7 +23,7 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
@@ -62,43 +58,28 @@
 .overlay {
   margin-left: auto;
   margin-right: auto;
-
   max-width: 100%;
   height: auto;
-  background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-  url(/images/hero-img-mobile.jpg);
+  background-image: var(--gra), url(/images/hero-img-mobile.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  @media screen and (min-width: 480px) {
+    @include retina {
+        background-image: var(--gra), url(/images/hero-img-mobile@2x.jpg);
+      }
+ 
+  @media screen and (min-width: 481px) {
     max-width: 768px;
-    height: 400px;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/hero-img-tablet.jpg);
+    background-image: var(--gra), url(/images/hero-img-tablet.jpg);
+      @include retina {
+          background-image: var(--gra), url(/images/hero-img-tablet@2x.jpg);
+        }
   }
-  @media screen and (max-width: 768px) {
-    max-width: 1200px;
-    height: 400px;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/hero-img-desktop.jpg);
-  }
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 769px) {
     max-width: 1600px;
-    height: 600px;
-    background-image: linear-gradient(
-        rgba(47, 48, 58, 0.4),
-        rgba(47, 48, 58, 0.4)
-      ),
-      url(../images/hero-img-desktop.jpg);
+    background-image: var(--gra), url(/images/hero-img-desktop.jpg);
+      @include retina {
+          background-image: var(--gra), url(/images/hero-img-desktop@2x.jpg);
+        }
   }
 }

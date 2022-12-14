@@ -3,3 +3,34 @@
     padding: 0;
     margin: 0;
   }
+
+%link {
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+  %button { 
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    outline: transparent;
+    background-color: transparent;
+   
+    cursor: pointer;
+    transition: fill 250ms var(--timing-function);
+  
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }

@@ -16,10 +16,10 @@
 }
 
 .page-header__site-nav {
-  @media screen and (min-width: 768px) {
+  @include tablet {
     margin-left: 88px;
   }
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     margin-left: 93px;
   }
 }
@@ -28,33 +28,15 @@
   margin-left: auto;
 }
 
-.button { 
-  display: inline-flex;
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
+.button-menu {
+  @extend %button;
   width: 40px;
   height: 40px;
   border: none;
-  outline: transparent;
-  background-color: transparent;
- 
-  cursor: pointer;
-  transition: fill 250ms var(--timing-function);
+  margin-left: auto;
+  fill: var(--title-text-color);
 
-  &:hover,
-  &:focus {
-    fill: var(--accent-color);
+  @include tablet {
+    display: none;    
   }
-}
-
-.button__close {
-  display: none;
-}
-.button.is-open .button__close{
-  display: block;
-}
-.button.is-open .button__open{
-  display: none;
 }

@@ -1,5 +1,7 @@
 .logo {
   display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: var(--black-text-color-logo);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -8,8 +10,12 @@
   letter-spacing: 0.03em;
   text-decoration: none;
   justify-content: center;
+
+  @include tablet {
+    padding: 0;
+  }
  
-  @media screen and (min-width: 1200px) {
+  @include desktop {
     justify-content: left;
     font-size: 26px;
     line-height: 1.19;

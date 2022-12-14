@@ -1,14 +1,19 @@
 .connection-list {
   @extend %list;
+  display: none;
 
-  @media screen and (min-width: 1200px) {
+  @include tablet {
+    display: block;
+  }
+
+  @include desktop {
     display: flex;
     align-items: center;
   }
 }
   .connection-list__item {
    
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       margin-left: 40px;
     }
     &:first-child {
@@ -17,18 +22,23 @@
   }
  
   .connection-list__link {
-    @media screen and (min-width: 768px) {
-      display: flex;
-      align-items: center;
+    @extend %link;
+    display: flex;
+    align-items: center;
+
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
+
+    @include tablet {
       padding-top: 5px;
       padding-bottom: 5px;
       font-size: 12px;
       line-height: 1.17;
     }
    
-    @media screen and (min-width: 1200px) {
-      display: flex;
-      align-items: center;
+    @include desktop {
       padding-top: 32px;
       padding-bottom: 32px;
       font-size: 14px;
@@ -39,10 +49,11 @@
   .connection-list__icon {
     fill: currentColor;
     
-    @media screen and (min-width: 768px) {
+    @include tablet {
       margin-right: 8px;
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       margin-right: 10px;
     }
   }
+  

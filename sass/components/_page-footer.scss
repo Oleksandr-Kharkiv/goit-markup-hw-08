@@ -10,30 +10,26 @@
       justify-content: center;
       align-items: center;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
       column-gap: 0;
       align-items: baseline;
     }
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       row-gap: 0;
       justify-content: space-between;
     }
   }
-  // .page-footer__contacts {
-  // }
 
   .page-footer__our-contacts{
     margin-top: 28px;
-    
-    // @media screen and (min-width: 1200px) {
-    // }
+  
   }
   .page-footer__join {
-    @media screen and (min-width: 768px) {
+    @include tablet {
       margin-left: 165px;      
     }
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       margin-left: 70px;
     }
   }
@@ -48,15 +44,14 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
 
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       padding-top: 12px;
       text-align: left;
     }
   }
   .page-footer__subscribe {
     
-
-    @media screen and (min-width: 1200px) {
+    @include desktop {
       display: block;
       margin-left: 93px;
     }
