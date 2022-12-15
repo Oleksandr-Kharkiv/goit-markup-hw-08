@@ -15,9 +15,11 @@
     flex-basis: calc((100% - 60px) / 3);
   }
   .works-list__picture {
-    display: block;
-    max-width: 100%;
-    height: auto;
+    @include desktop {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
   }
   .works-list__thumb {
     position: absolute;

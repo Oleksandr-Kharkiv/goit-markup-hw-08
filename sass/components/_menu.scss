@@ -62,10 +62,15 @@
   @extend %link;
   display: block;
   font-weight: 500;
-  font-size: 34px;
-  line-height: calc(40/34);
+  font-size: 24px;
+  line-height: calc(28/24);
   color: var(--accent-color);
   margin-top: 32px;
+
+  @media screen and (min-width: 400px) {
+    font-size: 34px;
+    line-height: calc(40/34);
+  }
 
   &:hover,
   &:focus {
@@ -77,15 +82,30 @@
   @extend %link;
   display: block;
   margin-top: 32px;
-  font-size: 24px;
-  line-height: calc(28/24);
+  font-size: 22px;
+  line-height: calc(26/22);
+  
+  @media screen and (min-width: 400px) {
+    font-size: 24px;
+    line-height: calc(28/24);
+  }
 }
 .mob-social {
   @extend %list;
   display: flex;
-  margin-top: 64px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin-top: 32px;
+
+  @media screen and (min-width: 400px) {
+    margin-top: 64px;
+  }
+  
 }
 .mob-social__item {
+  display: flex;
+  flex-wrap: wrap;
   margin-right: 10px;
   + .mob-social__item {
     padding-left: 10px;
@@ -98,7 +118,12 @@
 
 .mob-social__link { 
   @extend %link;
-  font-size: 18px;
-  line-height: calc(22/18);
+  font-size: 16px;
+  line-height: calc(20/16);
   color: var(--accent-color);
+
+  @media screen and (min-width: 400px) {
+    font-size: 18px;
+    line-height: calc(22/18);
+  }
 }

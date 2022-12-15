@@ -18,21 +18,20 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  column-gap: 8px;
   row-gap: 15px;
-  
+  column-gap: 8px;
+    
   @include tablet {
     justify-content: center;
-    row-gap: 15px;
+    row-gap: 0;
   }
-  
 }
-  .filter__item {
-    margin-left: 8px;
-    &:first-child {
-      margin-left: 0px;
-    }
-  }
+  // .filter__item {
+  //   margin-right: 8px;
+  //   &:last-child {
+  //     margin-right: 0px;
+  //   }
+  // }
   .filter__button {
     display: inline-block;
     border: 1px solid transparent;
