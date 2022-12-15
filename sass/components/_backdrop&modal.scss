@@ -41,11 +41,8 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    @include tablet {
-      position: absolute;   
-    }
-
     @include desktop {
+      position: absolute; 
       max-width: 528px;
       max-height: 581px;
       width: 100%;
