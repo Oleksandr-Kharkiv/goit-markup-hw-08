@@ -1438,21 +1438,28 @@ img {
   margin-bottom: 30px;
 }
 
-.rules__title {
+.rules__description {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
+@media screen and (min-width: 438px) {
+  .rules__description {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 @media screen and (min-width: 1200px) {
-  .rules__title {
+  .rules__description {
     font-size: 14px;
     line-height: 1.71;
   }
@@ -1463,7 +1470,7 @@ img {
   height: 15px;
   border: 2px solid var(--title-text-color);
   border-radius: 2px;
-  margin-right: 7px;
+  margin-right: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1478,18 +1485,18 @@ img {
   transition: background-color 250ms var(--timing-function), border 250ms var(--timing-function), fill 250ms var(--timing-function);
 }
 
-.rules__accept:checked + .rules__title > .rules__checkbox {
+.rules__accept:checked + .rules__description > .rules__checkbox {
   background-color: var(--accent-color);
   border: none;
   fill: var(--text-and-primary-bg-white-color);
 }
 
-.rules__accept:focus + .rules__title > .rules__checkbox,
-.rules__accept:hover + .rules__title > .rules__checkbox {
+.rules__accept:focus + .rules__description > .rules__checkbox,
+.rules__accept:hover + .rules__description > .rules__checkbox {
   border: 2px solid var(--accent-color);
 }
 
-.rules__description {
+.rules__contract {
   margin-left: 5px;
   color: var(--accent-color);
 }
