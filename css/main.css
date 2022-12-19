@@ -33,7 +33,7 @@ ul {
   margin: 0;
 }
 
-.mob-social__link, .mob-menu__email, .mob-menu__phone, .menu-nav__link, .contacts-list__link, .connection-list__link, .site-nav__link {
+.mob-social__link, .mob-menu__email, .mob-menu__phone, .menu-nav__link, .contacts-list__link, .connection-list__link, .site-nav__link, .site-nav__link--current {
   color: var(--primary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -133,13 +133,6 @@ body.modal-open {
   overflow: hidden;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  width: 100%;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -215,7 +208,7 @@ img {
   margin-left: 0;
 }
 
-.site-nav__link {
+.site-nav__link, .site-nav__link--current {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,7 +217,7 @@ img {
   padding-bottom: 32px;
   color: var(--title-text-color);
 }
-.site-nav__link:hover, .site-nav__link:focus {
+.site-nav__link:hover, .site-nav__link--current:hover, .site-nav__link:focus, .site-nav__link--current:focus {
   color: var(--accent-color);
 }
 
@@ -1064,9 +1057,9 @@ img {
   border: 1px solid transparent;
   border-radius: 4px;
   padding-top: 6px;
-  padding-right: 22px;
+  padding-right: 24px;
   padding-bottom: 6px;
-  padding-left: 22px;
+  padding-left: 24px;
   color: var(--title-text-color);
   background-color: var(--buttons-and-bg-color);
   outline: transparent;
@@ -1081,6 +1074,12 @@ img {
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
   transition: box-shadow 250ms var(--timing-function), color 250ms var(--timing-function), background-color 250ms var(--timing-function);
   transition: box-shadow 250ms var(--timing-function), color 250ms var(--timing-function), background-color 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
+}
+@media screen and (min-width: 768px) {
+  .filter__button {
+    padding-right: 22px;
+    padding-left: 22px;
+  }
 }
 .filter__button:hover, .filter__button:focus {
   color: var(--text-and-primary-bg-white-color);
