@@ -2,7 +2,7 @@ body {
     color: var(--primary-text-color);
     background-color: var(--text-and-primary-bg-white-color);
     font-family: "Roboto", sans-serif;
-
+    // margin-left: calc(100vw - 100%); // щоб не стрибало зображення при відкритті/закритті модалки
     &.modal-open {
       overflow: hidden;
     }
